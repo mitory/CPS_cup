@@ -11,7 +11,7 @@ body {
 }
 .form_wrapp {
 	margin: 0 auto;
-	padding-top: 250px;
+	padding-top: 100px;
 	width: 400px;
 }
 .form {
@@ -55,4 +55,28 @@ body {
 .form__button:focus,
 .form__button:hover {
 	color: rgb(10,20,55);
+}
+
+.links {
+	display: flex;
+	padding: 50px 0 0 50px;
+}
+.link {
+	margin-left: 10px;
+	border-radius: 15px;
+	box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25);
+	color: white;
+	padding: 10px;
+	font-size: 18px;
+	color: black;
+	text-transform: uppercase;
+}
+
+.select {
+	background-color: rgba(10,20,55, 0.2)
+}
+
+.acc_input {
+	width: 300px;
+	margin: 50px auto;
 }

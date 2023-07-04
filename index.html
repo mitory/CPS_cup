@@ -13,12 +13,34 @@
 		<a href="login.html"><div class="link">Войти</div></a>
 	</div>
 			<div class="form_wrapp">
-				<form class="form" action="">
-					<input class="form__input" placeholder="Почта" type="text">
+				<form class="form" name="reg" action="">
+					<input class="form__input" placeholder="Почта" type="text"  onclick="btnClick();">
 					<input class="form__input" placeholder="Пароль" type="password">
 					<input class="form__input" placeholder="Повторите пароль" type="password">
-					<button class="form__button" onclick="">Зарегестрироваться</button>
+					<button class="form__button" onclick="btnClick();">Зарегестрироваться</button>
 				</form>
 			</div>
+
+			<script>
+		function btnClick(){
+			let user = {
+				username: 'John',
+				password: '111',
+				email: 'John@mail.ru'
+			};
+			console.log(JSON.stringify(user))
+			fetch('http://minnouser.pythonanywhere.com/register/', {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json;charset=utf-8'
+					},
+					body: JSON.stringify(user),
+					// mode: 'no-cors'
+					})
+			.then(response => response.json())
+			.then(result => alert(result))
+		};
+
+	</script>
 </body>
 </html>
